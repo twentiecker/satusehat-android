@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         setupView()
 
-        binding.btnCheckin.setOnClickListener {
+        binding.view2.setOnClickListener {
             val intent = Intent(this, CheckInActivity::class.java)
             startActivity(intent)
         }
@@ -57,8 +57,8 @@ class MainActivity : AppCompatActivity() {
             window.insetsController?.hide(WindowInsets.Type.statusBars())
         } else {
             window.setFlags(
-                WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS,
-                WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
             )
         }
         supportActionBar?.hide()

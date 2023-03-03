@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -25,6 +26,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_tangan_hor"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.148"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidebottomcard"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
@@ -39,16 +49,7 @@
         android:layout_height="64dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.306"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_percent="0.655"
+        app:layout_constraintGuide_percent="0.302"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -58,6 +59,24 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_percent="0.34"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.63"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidebanner"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.655"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -84,7 +103,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="9.1dp"
         android:text="Halo, Nur Hafizah Agustina"
-        android:textColor="@color/purple_500"
+        android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="@id/guidestart"
         app:layout_constraintTop_toTopOf="@id/guidelineHorizontalMiddle" />
@@ -94,51 +113,105 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/bg_round_checkin"
-        android:backgroundTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="@id/guidebottomcard"
         app:layout_constraintEnd_toEndOf="@+id/guideend"
         app:layout_constraintStart_toStartOf="@+id/guidestart"
         app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontalUser" />
 
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="29dp"
+        android:src="@drawable/kemenkes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_main"
+        app:layout_constraintBottom_toTopOf="@id/img_tangan" />
+
+    <ImageView
+        android:id="@+id/img_tangan"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:src="@drawable/checkin"
+        app:layout_constraintBottom_toBottomOf="@+id/view_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guide_tangan_hor" />
+
     <TextView
         android:id="@+id/tv_publik"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="14dp"
         android:text="Masuk ke Ruang Publik?"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@id/guidestart"
         app:layout_constraintTop_toTopOf="@id/view_main" />
+
+    <ImageView
+        android:id="@+id/img_gear"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/gear"
+        app:layout_constraintBottom_toBottomOf="@id/view_main"
+        app:layout_constraintStart_toStartOf="@id/guidestart"
+        app:layout_constraintTop_toBottomOf="@id/tv_publik" />
 
     <TextView
         android:id="@+id/tv_atur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="13dp"
         android:text="Atur Check-in |"
+        android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@id/view_main"
-        app:layout_constraintStart_toStartOf="@id/guidestart"
+        app:layout_constraintStart_toEndOf="@id/img_gear"
         app:layout_constraintTop_toBottomOf="@id/tv_publik" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_checkin"
-        android:layout_width="wrap_content"
-        android:layout_height="18dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/bg_button"
-        android:drawableStart="@drawable/ic_baseline_close_24"
-        android:text="Check-in"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="10sp"
+    <View
+        android:id="@+id/view2"
+        android:layout_width="94dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/bg_round_name"
+        android:backgroundTint="#3899fe"
         app:layout_constraintBottom_toBottomOf="@id/view_main"
         app:layout_constraintStart_toEndOf="@id/tv_atur"
         app:layout_constraintTop_toBottomOf="@id/tv_publik" />
 
+    <ImageView
+        android:id="@+id/img_scan"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/scan"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintStart_toStartOf="@id/view2"
+        app:layout_constraintTop_toTopOf="@id/view2" />
+
+    <TextView
+        android:id="@+id/tv_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:text="Check-in"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/view2"
+        app:layout_constraintStart_toEndOf="@id/img_scan"
+        app:layout_constraintTop_toTopOf="@id/view2" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
         android:text="Fitur"
         android:textColor="@color/black"
         android:textSize="14sp"
@@ -149,7 +222,7 @@
         android:id="@+id/cord_main"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:background="#fafafa"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHorizontal"
         app:layout_constraintEnd_toEndOf="@id/guideend"
         app:layout_constraintStart_toStartOf="@id/guidestart"
@@ -159,10 +232,6 @@
             android:id="@+id/grid_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="10dp"
             android:columnCount="4"
             android:rowCount="2">
 
@@ -175,7 +244,7 @@
                 android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -184,9 +253,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_margin="5dp"
                         android:src="@drawable/resume"
                         app:layout_constraintBottom_toTopOf="@id/text1"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -201,7 +268,7 @@
                         android:text="Resume\nMedis"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -218,7 +285,7 @@
                 android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -227,9 +294,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_margin="5dp"
                         android:src="@drawable/vaksin"
                         app:layout_constraintBottom_toTopOf="@id/text2"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -244,7 +309,7 @@
                         android:text="Vaksin dan\nImunisasi"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -260,7 +325,7 @@
                 android:layout_column="2"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -269,9 +334,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_margin="5dp"
                         android:src="@drawable/hasil"
                         app:layout_constraintBottom_toTopOf="@id/text3"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -286,7 +349,7 @@
                         android:text="Hasil Tes\nCovid-19"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -302,7 +365,7 @@
                 android:layout_column="3"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:backgroundTint="@color/white">
+                android:backgroundTint="#fafafa">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -311,9 +374,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_margin="5dp"
                         android:src="@drawable/rawat"
                         app:layout_constraintBottom_toTopOf="@id/text4"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -328,7 +389,7 @@
                         android:text="Cari Rawat\nInap"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -344,7 +405,7 @@
                 android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -353,10 +414,7 @@
                     <ImageView
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginBottom="3dp"
+                        android:layout_margin="5dp"
                         android:src="@drawable/pelayanan"
                         app:layout_constraintBottom_toTopOf="@id/text5"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -371,7 +429,7 @@
                         android:text="Pelayanan\nKesehatan"
                         android:textAlignment="center"
                         android:textColor="@color/black"
-                        android:textSize="14sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -386,7 +444,7 @@
                 android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
             </androidx.cardview.widget.CardView>
 
@@ -398,7 +456,7 @@
                 android:layout_column="2"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
             </androidx.cardview.widget.CardView>
 
@@ -410,7 +468,7 @@
                 android:layout_column="3"
                 android:layout_columnWeight="1"
                 android:layout_gravity="fill"
-                android:background="@color/white">
+                android:background="#fafafa">
 
             </androidx.cardview.widget.CardView>
 
