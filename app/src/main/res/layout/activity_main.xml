@@ -4,15 +4,423 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/patokan"
     tools:context=".MainActivity">
 
-    <TextView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="tester" />
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidelineHorizontalMiddle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.052"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidelineHorizontalUser"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.095"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidebottomcard"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.265"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidefitur"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.306"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidelineHorizontal"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.655"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidecardfitur"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.34"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guidestart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.036"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guideend"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="64dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintGuide_percent="0.964"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/image_user"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:src="@drawable/ic_undraw_male_avatar_re_8fid"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontalUser"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/guidelineVertical"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/nameTextView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="9.1dp"-->
+<!--        android:text="Halo, Lukman Eka Arifandhi"-->
+<!--        android:textColor="@color/purple_500"-->
+<!--        android:textSize="15sp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/guidestart"-->
+<!--        app:layout_constraintTop_toTopOf="@id/guidelineHorizontalMiddle" />-->
+
+<!--    &lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_width="0dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintStart_toStartOf="@id/guidelineVertical"&ndash;&gt;-->
+<!--    &lt;!&ndash;        app:layout_constraintTop_toBottomOf="@id/guidelineHorizontalMiddle">&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginLeft="5dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:text="@string/let_s"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textColor="@color/black"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textSize="18sp" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginLeft="5dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:text="@string/xplore"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textColor="@color/black"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textSize="18sp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textStyle="bold|italic" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_marginLeft="5dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:text="@string/itb"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textColor="@color/black"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textSize="18sp" />&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:id="@+id/cord_main"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:background="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/img_main">-->
+
+<!--        <GridLayout-->
+<!--            android:id="@+id/grid_main"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginRight="15dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:columnCount="3"-->
+<!--            android:rowCount="2">-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cv_review"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_row="0"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_column="0"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_gravity="fill"-->
+<!--                android:background="@color/white">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:src="@drawable/ic_baseline_amp_stories_24"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/text1"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text1"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="@string/review"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cv_map"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_row="0"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_column="1"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_gravity="fill"-->
+<!--                android:background="@color/white">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:src="@drawable/ic_baseline_map_24_menu"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/text2"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text2"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="@string/title_activity_direction"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cv_sepeda"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_row="0"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_column="2"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_gravity="fill"-->
+<!--                android:background="@color/white">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:src="@drawable/ic_baseline_electric_bike_24"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/text3"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text3"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="@string/bikes_name"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cv_scanner"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_row="1"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_column="0"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_gravity="fill"-->
+<!--                android:backgroundTint="@color/white">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:src="@drawable/ic_baseline_qr_code_scanner_24"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/text4"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text4"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="@string/qr_code"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cv_peduli"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_row="1"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_column="1"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_gravity="fill"-->
+<!--                android:background="@color/white">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_marginEnd="5dp"-->
+<!--                        android:layout_marginBottom="3dp"-->
+<!--                        android:src="@drawable/peduli_lindungi_icon"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/text5"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text5"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="PeduliLindungi"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/cv_bus"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_row="1"-->
+<!--                android:layout_rowWeight="1"-->
+<!--                android:layout_column="2"-->
+<!--                android:layout_columnWeight="1"-->
+<!--                android:layout_gravity="fill"-->
+<!--                android:background="@color/white">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="0dp"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginRight="5dp"-->
+<!--                        android:src="@drawable/ic_baseline_directions_bus_24"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/text6"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/text6"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginBottom="10dp"-->
+<!--                        android:text="@string/favorite"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="14sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent" />-->
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </androidx.cardview.widget.CardView>-->
+
+<!--        </GridLayout>-->
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
